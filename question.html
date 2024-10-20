@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Eres hermosa?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url(images/download.jfif);
+            color: #333;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.034);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.034);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+        .image-gallery img {
+            width: 300px; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #ff7f50; /* Coral color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff6347; /* Tomato color on hover */
+        }
+    </style>
+    <script>
+        // Function to handle the "Sí" button click
+        function handleYesClick() {
+            // Save progress in local storage (unlock option 4)
+            localStorage.setItem('menuProgress', 4);
+            // Redirect to menu.html
+            window.location.href = 'menu.html';
+        }
+
+        // Function to handle the "No" button click
+        function handleNoClick() {
+            alert('¡Mentiras! Presiona Sí');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Eres hermosa?</h1>
+        <p>¡Tienes que saber que eres increíble!</p>
+        <div class="image-gallery">
+            <img src="images/2.jpg" alt="Imagen de ella 1">
+            <img src="images/IMG_0014.jpg" alt="Imagen de ella 2">
+            <img src="images/IMG_0304.jpg" alt="Imagen de ella 3">
+            <img src="images/IMG_0605.jpg" alt="Imagen de ella 4">
+            <img src="images/IMG_0682.jpg" alt="Imagen de ella 5">
+            <img src="images/IMG_0709.jpg" alt="Imagen de ella 6">
+            <img src="images/3.jpg" alt="Imagen de ella 7">
+            <img src="images/4.jpg" alt="Imagen de ella 8">
+            <img src="images/5.jpg" alt="Imagen de ella 9">
+            <img src="images/6.jpg" alt="Imagen de ella 10">
+            <img src="images/7.jpg" alt="Imagen de ella 11">
+            <img src="images/8.jpg" alt="Imagen de ella 12">
+            <img src="images/9.jpg" alt="Imagen de ella 13">
+            <img src="images/image.jpg" alt="Imagen de ella 14">
+            <img src="images/image1.jpg" alt="Imagen de ella 15">
+            <!-- Add more images as needed -->
+        </div>
+        <button onclick="handleYesClick()">Sí</button>
+        <button onclick="handleNoClick()">No</button>
+    </div>
+</body>
+</html>

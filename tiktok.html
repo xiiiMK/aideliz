@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tiktoks para ti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            background-image:url(images/45115-3840x2160-desktop-4k-heart-wallpaper.jpg) ;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.055);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        .button-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        button {
+            background-color: #8b00ad; /* Coral color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 200px; /* Fixed width for buttons */
+        }
+        button:hover {
+            background-color: #a8009a; /* Tomato color on hover */
+        }
+    </style>
+    <script>
+        // Function to handle going back to menu and unlocking option 5
+        function goToMenu() {
+            // Save progress in local storage (unlock option 5)
+            localStorage.setItem('menuProgress', 5);
+            // Redirect to menu.html
+            window.location.href = 'menu.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>tiktoks para ti</h1>
+        <div class="button-gallery">
+            <button onclick="window.open('https://www.tiktok.com/@red_thoughts6070/video/7389103762083695904', '_blank')">TikTok Video 1</button>
+            <button onclick="window.open('https://www.tiktok.com/@red_thoughts6070/photo/7413493362877058337', '_blank')">TikTok Video 2</button>
+            <button onclick="window.open('https://www.tiktok.com/@red_thoughts6070/photo/7406474280466222369', '_blank')">TikTok Video 3</button>
+            <button onclick="window.open('https://www.tiktok.com/@red_thoughts6070/photo/7400047212253695265', '_blank')">TikTok Video 4</button>
+            <button onclick="window.open('https://www.tiktok.com/@red_thoughts6070/photo/7390933654035287328', '_blank')">TikTok Video 5</button>
+            <button onclick="window.open('https://www.tiktok.com/@red_thoughts6070/photo/7414224903789940000', '_blank')">TikTok Video 6</button>
+            <button onclick="window.open('https://www.tiktok.com/@red_thoughts6070/photo/7409654403126283553', '_blank')">TikTok Video 7</button>
+            <button onclick="window.open('https://www.tiktok.com/@tbongcapcut/video/7315979835623460101?q', '_blank')">TikTok Video 8</button>
+        </div>
+        <button onclick="goToMenu()">Volver al Menú</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url(images/desktop-wallpaper-lovers-pics-group-keep-calm-and-dream.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #c9c2c2;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(207, 202, 202, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #070153; /* Coral color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #130146; /* Tomato color on hover */
+        }
+        button:disabled {
+            background-color: #ccc; /* Grey color for disabled buttons */
+            cursor: not-allowed;
+        }
+    </style>
+    <script>
+        const totalButtons = 8;
+
+        // Function to unlock the next button
+        function unlockNextButton(currentButtonIndex) {
+            const buttons = document.querySelectorAll('.menu-button');
+            if (currentButtonIndex < buttons.length - 1) {
+                buttons[currentButtonIndex + 1].disabled = false;
+            }
+            // Save progress in local storage
+            localStorage.setItem('menuProgress', currentButtonIndex + 1);
+        }
+
+        // Function to load progress from local storage
+        function loadProgress() {
+            const progress = localStorage.getItem('menuProgress');
+            if (progress) {
+                const buttons = document.querySelectorAll('.menu-button');
+                for (let i = 0; i < totalButtons; i++) {
+                    if (i < progress) {
+                        buttons[i].disabled = false; // Enable unlocked buttons
+                    } else {
+                        buttons[i].disabled = true; // Disable locked buttons
+                    }
+                }
+            }
+        }
+
+        // Call loadProgress on page load
+        window.onload = loadProgress;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Menú</h1>
+        <button class="menu-button" onclick="unlockNextButton(0); window.location.href='birthday.html'">Opción 1</button>
+        <button class="menu-button" onclick="unlockNextButton(1); window.location.href='index.html'" disabled>Opción 2</button>
+        <button class="menu-button" onclick="unlockNextButton(2); window.location.href='question.html'" disabled>Opción 3</button>
+        <button class="menu-button" onclick="unlockNextButton(3); window.location.href='tiktok.html'" disabled>Opción 4</button>
+        <button class="menu-button" onclick="unlockNextButton(4); window.location.href='answer.html'" disabled>Opción 5</button>
+        
+    </div>
+</body>
+</html>
