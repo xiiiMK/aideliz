@@ -28,7 +28,7 @@
             margin: 20px 0;
         }
         button {
-            background-color: #070153; /* Coral color */
+            background-color: #070153; 
             color: white;
             border: none;
             padding: 10px 20px;
@@ -38,42 +38,42 @@
             margin: 10px;
         }
         button:hover {
-            background-color: #130146; /* Tomato color on hover */
+            background-color: #130146; 
         }
         button:disabled {
-            background-color: #ccc; /* Grey color for disabled buttons */
+            background-color: #ccc; 
             cursor: not-allowed;
         }
     </style>
     <script>
         const totalButtons = 8;
 
-        // Function to unlock the next button
+       
         function unlockNextButton(currentButtonIndex) {
             const buttons = document.querySelectorAll('.menu-button');
             if (currentButtonIndex < buttons.length - 1) {
                 buttons[currentButtonIndex + 1].disabled = false;
             }
-            // Save progress in local storage
+           
             localStorage.setItem('menuProgress', currentButtonIndex + 1);
         }
 
-        // Function to load progress from local storage
+       
         function loadProgress() {
             const progress = localStorage.getItem('menuProgress');
             if (progress) {
                 const buttons = document.querySelectorAll('.menu-button');
                 for (let i = 0; i < totalButtons; i++) {
                     if (i < progress) {
-                        buttons[i].disabled = false; // Enable unlocked buttons
+                        buttons[i].disabled = false; 
                     } else {
-                        buttons[i].disabled = true; // Disable locked buttons
+                        buttons[i].disabled = true; 
                     }
                 }
             }
         }
 
-        // Call loadProgress on page load
+        
         window.onload = loadProgress;
     </script>
 </head>

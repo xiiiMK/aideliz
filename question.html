@@ -38,13 +38,13 @@
             gap: 5px;
         }
         .image-gallery img {
-            width: 300px; /* Adjust the size as needed */
+            width: 300px; 
             height: auto;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         button {
-            background-color: #ff7f50; /* Coral color */
+            background-color: #ff7f50; 
             color: white;
             border: none;
             padding: 10px 20px;
@@ -54,19 +54,19 @@
             margin-top: 20px;
         }
         button:hover {
-            background-color: #ff6347; /* Tomato color on hover */
+            background-color: #ff6347; 
         }
     </style>
     <script>
-        // Function to handle the "Sí" button click
+        
         function handleYesClick() {
-            // Save progress in local storage (unlock option 4)
+            
             localStorage.setItem('menuProgress', 4);
-            // Redirect to menu.html
+           
             window.location.href = 'menu.html';
         }
 
-        // Function to handle the "No" button click
+       
         function handleNoClick() {
             alert('¡Mentiras! Presiona Sí');
         }
@@ -92,7 +92,7 @@
             <img src="images/9.jpg" alt="Imagen de ella 13">
             <img src="images/image.jpg" alt="Imagen de ella 14">
             <img src="images/image1.jpg" alt="Imagen de ella 15">
-            <!-- Add more images as needed -->
+            
         </div>
         <button onclick="handleYesClick()">Sí</button>
         <button onclick="handleNoClick()">No</button>
